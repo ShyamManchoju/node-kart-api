@@ -4,6 +4,7 @@ var Product = require('./models/product');
 //var Promise = require('promise');
 const cors = require('cors');
 var app = express();
+const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 mongoose.connect('mongodb://localhost/ShoppingKart', {userNewUrlParser: true}, ()=>{
@@ -30,4 +31,6 @@ app.get('/products', function (req, res) {
 
 
  
-app.listen(4000)
+app.listen(PORT,()=>{
+    console.log("Server stareted on PORT : ", PORT);
+});
