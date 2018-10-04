@@ -7,7 +7,9 @@ var app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(cors());
-mongoose.connect('mongodb://localhost/ShoppingKart', {userNewUrlParser: true}, ()=>{
+//mongodb://admin:admin$123@ds045454.mlab.com:45454/shopping_kart
+//mongodb://localhost/ShoppingKart
+mongoose.connect('mongodb://admin:admin$123@ds045454.mlab.com:45454/shopping_kart', {userNewUrlParser: true}, ()=>{
     console.log('MongoDB connected !!!');
 });
 
